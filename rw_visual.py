@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import pygal
 
 from random_walk import RandomWalk
 
@@ -20,6 +21,11 @@ while True:
     plt.axes().get_yaxis().set_visible(False)
 
     plt.show()
+    #使用pygal完成随机漫步可视化
+    # hist=pygal.XY(stroke=False)
+    # hist.title='Random Walk'
+    # hist.add('A',[(rw.x_values[i],rw.y_values[i]) for i in range(0,rw.num_point)])
+    # hist.render_to_file('RandomWalk.svg')
 
     keep_running= input('Make another walk? (y/n)')
     if keep_running=='n':
